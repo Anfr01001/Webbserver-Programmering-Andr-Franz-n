@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Värd: 127.0.0.1
--- Tid vid skapande: 29 jan 2020 kl 10:43
+-- Tid vid skapande: 05 feb 2020 kl 10:35
 -- Serverversion: 10.4.6-MariaDB
 -- PHP-version: 7.3.8
 
@@ -84,7 +84,8 @@ INSERT INTO `products` (`productID`, `name`, `description`, `price`, `picture`) 
 (17, 'Turbo', 'Super mega trim bilen gÃ¥r snabbt', 500, 'bilder/fetingturbo.png'),
 (18, 'HjÃ¤lm (begangnad)', 'Skyddar kranium', 10, 'bilder/hjÃ¤lm.png'),
 (19, 'DÃ¤ck', 'Passar majoriteten av fÃ¤lgar', 2300, 'bilder/dÃ¤ck.png'),
-(20, 'Gris', 'En gris', 62, 'bilder/pig-2889661_960_720.png');
+(20, 'Gris', 'En gris', 62, 'bilder/pig-2889661_960_720.png'),
+(23, 'Trash bil', 'En dÃ¥lig bil', 999, 'bilder/trashcar.png');
 
 -- --------------------------------------------------------
 
@@ -105,7 +106,7 @@ CREATE TABLE `users` (
 
 INSERT INTO `users` (`username`, `email`, `password`, `status`) VALUES
 ('Andre', 'andre@andre.se', '$2y$10$Nx7BjJdGmfbRqm9sst/uZ.7sCAEodjk84TfEaAcliEHXwc4fqHpMu', 1),
-('kalle', 'kalle@kalle.se', '$2y$10$4FwH/eqGJgj/s9tqF7f8A.TQCTAMVwQSfJJJfoUi34dRh5E9NzQcO', 1),
+('kalle', 'kalle@kalle.se', '$2y$10$4FwH/eqGJgj/s9tqF7f8A.TQCTAMVwQSfJJJfoUi34dRh5E9NzQcO', 2),
 ('Luddz', 'ludd.ludd@ludd.se', '$2y$10$VqNpiXJqxK3VOkXCJ56/duf.fAG75yZPYN5ldKaH96l///GQVKsrC', 1);
 
 --
@@ -163,7 +164,7 @@ ALTER TABLE `orders`
 -- AUTO_INCREMENT för tabell `products`
 --
 ALTER TABLE `products`
-  MODIFY `productID` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+  MODIFY `productID` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
 
 --
 -- Restriktioner för dumpade tabeller
